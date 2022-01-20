@@ -765,8 +765,9 @@ message DeleteInstanceConfigRequest {
   // `projects/<project>/instanceConfigs/<instance_config>`
   string name = 1 [
     (google.api.field_behavior) = REQUIRED,
-    (google.api.resource_reference).type =
-        "spanner.googleapis.com/instanceConfigs"
+    (google.api.resource_reference) = {
+      type: "spanner.googleapis.com/InstanceConfig"
+    }
   ];
   // Used for optimistic concurrency control as a way to help prevent
   // simultaneous deletes of an instance config from overwriting each
